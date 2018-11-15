@@ -282,9 +282,9 @@ cv::Mat MainWindow::resize_image(const cv::Mat &input_image)
     }
 
     if (new_image_height * new_image_width < input_image.rows * input_image.cols) {
-        cv::resize(input_image, result_image, cv::Size(new_image_width, new_image_height), cv::INTER_CUBIC);
+        cv::resize(input_image, result_image, cv::Size(new_image_width, new_image_height), 0, 0, cv::INTER_CUBIC);
     } else {
-        cv::resize(input_image, result_image, cv::Size(new_image_width, new_image_height), cv::INTER_AREA);
+        cv::resize(input_image, result_image, cv::Size(new_image_width, new_image_height), 0, 0, cv::INTER_AREA);
     }
 
     return result_image;
