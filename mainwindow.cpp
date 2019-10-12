@@ -255,7 +255,7 @@ cv::Mat MainWindow::get_histogram_of_image(const cv::Mat& histogram)
 // There will be 3 types of local histogram equalization (10, 25, 50)
 // so resolution of image must be divided easily for these three divisor
 // Minimum 100x100 image is expected
-cv::Mat MainWindow::resize_image(const cv::Mat &input_image)
+cv::Mat MainWindow::resize_image(const cv::Mat& input_image)
 {
     cv::Mat result_image;
     int new_image_width, new_image_height;
